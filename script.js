@@ -1,23 +1,29 @@
 // --------------- PRÁTICA GUIADA ---------------
 
+const bimestre1 = [10,9,9,6]
+const bimestre2 = [10,7,9,10]
+const bimestre3 = [9,5,10,10]
+const bimestre4 = [9,9,10,9]
 
+const notasDoAno = [bimestre1,bimestre2,bimestre3,bimestre4]
 
+for (let c = 0; c < notasDoAno.length; c++){
+  let soma = 0
+  for (let j = 0; j < notasDoAno[c].length;j++){
+    soma += notasDoAno[c][j]
+  }
+  console.log(`A soma das notas do ${c+1} bimestre é ${soma}`)
+  console.log(`A média do ${c+1} bimestre é ${soma/notasDoAno[c].length}`)
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for (let i in notasDoAno){
+  let soma = 0
+  for (let nota of notasDoAno[i]){
+    soma = soma + nota
+  }
+  console.log(`A soma das notas do ${Number(i)+1} bimestre é ${soma}`)
+  console.log(`A média do ${Number(i+1)} bimestre é ${soma/notasDoAno[i].length}`)
+}
 
 // --------------- EXERCÍCIO DE FIXAÇÃO ---------------
 const filmes = [
